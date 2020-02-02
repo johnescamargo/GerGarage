@@ -290,11 +290,11 @@ include('session_admin.php');
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-    $price = $row["cost_service"];
+    $price = $row['cost_service'];
 
 
     $sql5 = "INSERT INTO services (`service_name`, `service_price`, `invoice_id_invoice`)
-            VALUES ('$name_service',$price,$id_invoice);";
+            VALUES ('$name_service', $price, $id_invoice);";
 
     $result5 = mysqli_query($conn, $sql5);
 

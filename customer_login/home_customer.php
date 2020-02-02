@@ -41,49 +41,24 @@ include('session.php');
     <div id="sign-up"> <?php echo "Welcome " . $_SESSION["login_name"]; ?></div>
 
 
-    <div id="division">
-        <div id="a111">
-            <form method="get">
-                <label for="id">ID Invoice / Booking: </label>
-                <input name="id-invoice" type="text" class="form-control" placeholder="Enter ID Invoice" id="id-invoice" required>
-                <br>
-                <div class="form-group">
-                    <button name="search" type="submit" class="btn btn-primary">Search</button>
-                </div>
-            </form>
-        </div>
-
-
-        <div id="a111">
-            <form method="get">
-                <label for="id">ID Invoice / Booking: </label>
-                <input name="id-invoice" type="text" class="form-control" placeholder="Enter ID Invoice" id="id-invoice" required>
-                <br>
-                <div class="form-group">
-                    <button name="search" type="submit" class="btn btn-primary">Search</button>
-                </div>
-            </form>
-        </div>
-
-
-        <div id="a111">
-        <form method="get">
-                <label for="id">Print Invoice: </label>
-            
+    <div id="sign-up">
+        <div id="sign-up">
+            <h3>Hybrid and Electric Vehicles</h3>
+            <p>Need your Hybrid and Electric Vehicle serviced and repaired. We are a fully qualified and trained electric vehicle repair centre. Diagnosing and repairing hybrid and EV faults including high voltage battery repairs, battery cell replacements and programing. We have the diagnostic and maintenance systems in place for Toyota Prius, Yaris EV, Mitsubishi Outlander PHEV, Golf GTE, Audi e-tron, Lexus hybrids including RX models, BMW i3 and i8 models, Mercedes C300 H and Volvo hybrids.</p>
             </br>
-            <div class="form-group">
-                <button onclick='myFunction()' class='btn btn-primary'>Print this page</button>
-            </div>
-            <script>
-                function myFunction() {
-                    window.print();
-                }
-            </script>
-            </form>
         </div>
 
+        <div id="sign-up">
+            <h3>Performance Tuning & Custom Remapping</h3>
+            <p>And to add another string to our bow we are providing the top class service of Customised Remapping. What this means is that with our UK performance partners, we can upgrade your vehicles software to a more advanced level. The maps used to update the engines software have been extensively tried and tested. Use our website app below to check how much power you can achieve from your car or van.
 
+                We can also add and remove electronic speed limiters and make map corrections. All our custom tunes are developed specifically for your requirements and can be set back to your original file like nothing was every changed with the press of a button. For more information on this great service please call or message us today.</p>
+        </div>
     </div>
+
+
+
+
 
 </body>
 

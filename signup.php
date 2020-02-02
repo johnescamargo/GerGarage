@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $sql = "INSERT INTO customer (email, name, surname, mob_phone, gender, password) 
   			  VALUES('$email', '$Name', '$Surname', '$Mob_phone', '$Gender', '$password')";
     $result = mysqli_query($conn, $sql);
-
 }
 
 ?>
@@ -53,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 
     <div id="sign-up">
+        <h2>Sign up</h2>
         <form method="post" action="signup.php" onsubmit="return checkForm(this);">
             <div class="form-group">
                 <label for="email">Email address:</label>
