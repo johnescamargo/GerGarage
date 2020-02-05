@@ -31,6 +31,12 @@ if (isset($_POST['reg_user'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url("../img/admin.jpg");
+            color: black;
+        }
+    </style>
 
 </head>
 
@@ -127,11 +133,12 @@ if (isset($_POST['reg_user'])) {
         <div id="a111">
             <form method="post">
                 <div class="form-group">
+                    </br></br><br>
                     <label for="delete"> Delete staff by their ID:</label>
                     <input name='delete' type="text" class="form-control" placeholder="Enter Id staff" id="delete" required>
                 </div>
 
-                <button name="delete_button" type="submit" class="btn btn-primary">Delete Mechanic</button>
+                <button name="delete_button" type="submit" class="btn btn-danger">Delete Mechanic</button>
 
 
             </form>

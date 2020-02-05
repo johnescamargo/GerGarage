@@ -6,7 +6,7 @@ include('session.php');
 <html>
 
 <head>
-    <title>Log In</title>
+    <title>Register Vehicle</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/javaScript.js"></script>
 
@@ -15,6 +15,12 @@ include('session.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url("../img/customer.jpg");
+            color: black;
+        }
+    </style>
 
 </head>
 
@@ -37,7 +43,7 @@ include('session.php');
         </div>
     </nav>
 
-    <div id="sign-up">
+    <div id="sign-up3">
         <form method="post" action="add_vehicle.php">
             <div class="form-group">
                 <label for="make">Make</label>
@@ -51,7 +57,7 @@ include('session.php');
                     <option value="Fiat">Fiat</option>
                     <option value="Volkswagen">Volkswagen</option>
                     <option value="Volvo">Volvo</option>
-                    
+
                 </select>
                 <br>
 
@@ -93,7 +99,7 @@ include('session.php');
         carsAndModels['Volvo'] = ['V70', 'XC60', 'XC90'];
 
 
-        
+
 
         function ChangeCarList() {
             var carList = document.getElementById("make");

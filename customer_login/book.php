@@ -6,7 +6,7 @@ include('session.php');
 <html lang="en-us">
 
 <head>
-  <title>Log In</title>
+  <title>Booking</title>
   <link rel="stylesheet" href="../css/styles.css">
   <script src="js/javaScript.js"></script>
 
@@ -27,7 +27,12 @@ include('session.php');
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 
-
+  <style>
+    body {
+      background-image: url("../img/customer.jpg");
+      color: black;
+    }
+  </style>
 
 </head>
 
@@ -51,7 +56,7 @@ include('session.php');
   </nav>
 
 
-  <div id="sign-up">
+  <div id="sign-up3">
     <form method="post" action="book.php">
       <div class="form-group">
         <label for="sel1">Select Your Vehicle: </label>
@@ -172,6 +177,56 @@ include('session.php');
 
                           $result5 = mysqli_query($conn, $sql5);
                         }
+
+                        // Save Annual Service
+                        if ($service_type === "Annual Service") {
+                          //Update into Invoice Table
+                          $sql34 = "UPDATE invoice 
+                          SET total_price= 235
+                          WHERE booking_id_booking = $id_booking;";
+                          $result2 = mysqli_query($conn, $sql34);
+
+                          //save value to Services table
+                          $sql5 = "INSERT INTO services (`service_name`, `service_price`, `invoice_id_invoice`)
+                          VALUES ('Annual Service', 160 ,$id_booking);";
+
+                          $result5 = mysqli_query($conn, $sql5);
+                        }
+
+                        // Save Major Service
+                        if ($service_type === "Major Service") {
+                          //Update into Invoice Table
+                          $sql34 = "UPDATE invoice 
+                          SET total_price= 235
+                          WHERE booking_id_booking = $id_booking;";
+                          $result2 = mysqli_query($conn, $sql34);
+
+                          //save value to Services table
+                          $sql5 = "INSERT INTO services (`service_name`, `service_price`, `invoice_id_invoice`)
+                         VALUES ('Major Service', 150, $id_booking);";
+
+                          $result5 = mysqli_query($conn, $sql5);
+                        }
+
+                        // Save Repair / Fault
+                        if ($service_type === "Repair / Fault") {
+                          //Update into Invoice Table
+                          $sql34 = "UPDATE invoice 
+                          SET total_price= 235
+                          WHERE booking_id_booking = $id_booking;";
+                          $result2 = mysqli_query($conn, $sql34);
+
+                          //save value to Services table
+                          $sql5 = "INSERT INTO services (`service_name`, `service_price`, `invoice_id_invoice`)
+                         VALUES ('Repair / Fault', 240, $id_booking);";
+
+                          $result5 = mysqli_query($conn, $sql5);
+                        }
+
+
+
+
+
                       } else {
                         echo '<script>alert("There is no available time")</script>';
                       }

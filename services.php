@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Ger's Garage</title>
+    <title>Service</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/javaScript.js"></script>
 
@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url("img/home.jpg");
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +38,20 @@
             </ul>
         </div>
     </nav>
-
+    <div id="service">
+        <img id="service_img" src="img/service.jpg" alt="service">
+    </div>
+    <div class="footer1">
+        <a href="#">
+            <img src="img/linkedin.png" alt="linkedin" width="30" height="30">
+        </a>
+        <a href="#">
+            <img src="img/instagram.png" alt="instagram" width="30" height="30">
+        </a>
+        <a href="#">
+            <img src="img/facebook.png" alt="facebook" width="30" height="30">
+        </a>
+    </div>
 
 
 </body>

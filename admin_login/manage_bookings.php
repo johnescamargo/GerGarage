@@ -6,7 +6,7 @@ include('session_admin.php');
 <html>
 
 <head>
-  <title>Log In</title>
+  <title>Manage</title>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="css/mycss.css">
   <script src="../js/javaScript.js"></script>
@@ -16,7 +16,12 @@ include('session_admin.php');
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <style>
+    body {
+      background-image: url("../img/admin.jpg");
+      color: black;
+    }
+  </style>
 </head>
 
 <body>
@@ -39,7 +44,7 @@ include('session_admin.php');
     </div>
   </nav>
 
-  <div id="sign-up">
+  <div id="sign-up3">
     <form method="get">
       <div class="form-group">
         <label for="id">ID Booking:</label>

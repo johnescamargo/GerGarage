@@ -1,11 +1,45 @@
+body {
+    color: white;
+    font: 0.875em/1.333 helvetica, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 #sign-up {
     margin-right: 5%;
     margin-left: 5%;
 }
 
+#sign-up2 {
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+#login {
+    margin-top: 5%;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+#service {
+    text-align-last: center;
+    margin-bottom: 8%;
+}
+
 #img1 {
     margin-left: 10%;
 }
+
+#service_img {
+    position: relative;
+}
+
 .column {
     float: left;
     width: 50%;
@@ -17,6 +51,29 @@
     content: "";
     display: table;
     clear: both;
+}
+
+.footer1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(14, 14, 32);
+    color: white;
+    text-align: center;
+    padding-top: 1px;
+}
+
+p {
+    text-indent: 50px;
+    text-align: justify;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+#sign-up3 {
+    margin-right: 25%;
+    margin-left: 25%;
 }
 
 

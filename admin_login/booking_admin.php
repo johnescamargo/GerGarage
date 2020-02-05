@@ -6,7 +6,7 @@ include('session_admin.php');
 <html>
 
 <head>
-  <title>Log In</title>
+  <title>Print Bookings</title>
   <link rel="stylesheet" href="../css/styles.css">
   <script src="../js/javaScript.js"></script>
 
@@ -26,6 +26,12 @@ include('session_admin.php');
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 
+  <style>
+    body {
+      background-image: url("../img/admin.jpg");
+      color: black;
+    }
+  </style>
 </head>
 
 <body>
@@ -134,6 +140,29 @@ include('session_admin.php');
           }
           echo "</tbody>
                         </table> </br>";
+        } else {
+          echo "0 Result";
+        }
+      }
+
+      if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) {
+          echo " <div id='divisionInvoice' >
+            <div id='a112'>
+            <table id='table-invoice' class='table table-hover' style ='width: -webkit-fill-available;' >
+                              <thead>
+                              <tr>
+                              <th>Comment</th>
+                              </tr>
+                              </thead>
+                              <tbody>";
+          while ($row = $result->fetch_assoc()) {
+            echo "<tr><td>" .
+              $row["comment"] . "</td><td>" .
+              "</td></tr>";
+          }
+          echo "</tbody>
+                            </table></div></div>";
         } else {
           echo "0 Result";
         }

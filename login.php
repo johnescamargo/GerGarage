@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <html lang="en">
 
 <head>
-  <title>Log In</title>
+  <title>Customer - Login</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/javaScript.js"></script>
 
@@ -43,6 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-image: url("img/login.jpg");
+      color: white;
+    }
+  </style>
 
 </head>
 
@@ -60,10 +66,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     </div>
   </nav>
 
-  <div id="sign-up">
+  <div id="login">
     <!-- <form action="customer_login/home_customer.php"> -->
     <form method="post">
       <div class="form-group">
+        <h3>Customer Login</h3>
+        </br>
         <label for="email">Email address:</label>
         <input name="email" type="email" class="form-control" id="email">
       </div>
@@ -74,11 +82,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
       <div class="checkbox">
         <label><input type="checkbox"> Remember me</label>
       </div>
-      <button type="submit" class="btn btn-primary">Log In</button>
+      <button type="submit" class="btn btn-danger">Log In</button>
     </form>
   </div>
 
-
+  <div class="footer1">
+    <a href="#">
+      <img src="img/linkedin.png" alt="linkedin" width="30" height="30">
+    </a>
+    <a href="#">
+      <img src="img/instagram.png" alt="instagram" width="30" height="30">
+    </a>
+    <a href="#">
+      <img src="img/facebook.png" alt="facebook" width="30" height="30">
+    </a>
+  </div>
 
 
 

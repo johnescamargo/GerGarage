@@ -6,7 +6,7 @@ include('session_admin.php');
 <html>
 
 <head>
-  <title>Log In</title>
+  <title>Invoice</title>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="css/mycss.css">
   <script src="../js/javaScript.js"></script>
@@ -18,6 +18,12 @@ include('session_admin.php');
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    body {
+      background-image: url("../img/admin.jpg");
+      color: black;
+    }
+  </style>
 
 </head>
 
@@ -57,12 +63,26 @@ include('session_admin.php');
       <form method="post">
         <label for="id">Services: </label>
         <select class="form-control" id="service" name="service">
-          <option>-- Services --</option>
+          <option>Air Filter Replacement</option>
+          <option>Battery</option>
+          <option>Brake Pads</option>
+          <option>Brake Fluid</option>
+          <option>Cambelt</option>
+          <option>Clutch replacements</option>
+          <option>Coolant Change</option>
+          <option>Diagnostic health check</option>
+          <option>Gearbox Repair</option>
+          <option>Exhaust replacements</option>
+          <option>Shocks</option>
           <option>Suspension Repair</option>
           <option>Steering Repair</option>
+          <option>Tracking</option>
+          <option>Tyre Punctures</option>
           <option>Wheel Alignment</option>
+          <option>Wiper blades replacement</option>
+
         </select>
-        <br>
+
 
         <div class="form-group">
           <button name="add-service" type="submit" class="btn btn-primary">Add Service</button>
@@ -95,6 +115,7 @@ include('session_admin.php');
   if (isset($_GET['search'])) {
     $id =  $_GET['id-invoice'];
     $_SESSION['id-invoice'] = $id;
+    $todays_date = date("Y-m-d");
 
     $sql = "SELECT * FROM invoice 
             INNER JOIN vehicle ON vehicle.license = invoice.vehicle_license
@@ -113,9 +134,11 @@ include('session_admin.php');
 
                    <div id='a111'> 
                        <label>Id Invoice : </label>
-                       <label>".$id."</label>
+                       <label>" . $id . "</label>
+                       </br>
+                       <label>Date of withdrawal: </label>
+                       <label>" . $todays_date . "</label>                  
                    </div>
-
               </div> ";
 
         echo " <div id='divisionInvoice'>
@@ -241,8 +264,10 @@ include('session_admin.php');
       $sum_total3 = implode(" ", $sum_total2);
 
       //Update into Invoice Table
+      $todays_date = date("Y-m-d");
       $sql33 = "UPDATE invoice 
                 SET total_price= $sum_total3
+                SET date= $todays_date
                 WHERE id_invoice = $id_invoice;";
 
       $result = mysqli_query($conn, $sql33);
@@ -260,7 +285,7 @@ include('session_admin.php');
                <table id='table-invoice' class='table table-hover' style ='width: -webkit-fill-available;' >
                  <thead>
                  <tr>
-                 <th>Total  _________ €</th>
+                 <th>Total  _______ €</th>
                  <th>" .
               $row["total_price"] . "</th>
                  </tr>

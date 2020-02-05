@@ -6,7 +6,7 @@ include('session.php');
 <html>
 
 <head>
-    <title>Customer</title>
+    <title>Home</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="css/mycss.css">
     <script src="../js/javaScript.js"></script>
@@ -16,6 +16,12 @@ include('session.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url("../img/customer.jpg");
+            color: black;
+        }
+    </style>
 
 </head>
 

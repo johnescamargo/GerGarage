@@ -6,7 +6,7 @@ include('session.php');
 <html>
 
 <head>
-  <title>Log In</title>
+  <title>History</title>
   <link rel="stylesheet" href="../css/styles.css">
   <script src="../js/javaScript.js"></script>
 
@@ -15,6 +15,12 @@ include('session.php');
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-image: url("../img/customer.jpg");
+      color: black;
+    }
+  </style>
 
 </head>
 
@@ -46,7 +52,7 @@ include('session.php');
               INNER JOIN vehicle ON vehicle.license = booking.vehicle_license
               WHERE vehicle.customer_email = '$email'
               ORDER BY DATE;";
-              
+
 
     //  $sql = "SELECT * FROM booking where Customer_email = '$email' ORDER BY DATE;";
 
