@@ -115,13 +115,13 @@ include('session_admin.php');
                           <tr>
                           <th>Date</th>
                           <th>ID</th>
+                          <th>Make</th>
                           <th>Type</th>
                           <th>Engine</th>
-                          <th>Make</th>
-                          <th>Service Type</th>
                           <th>License</th>
-                          <th>Status</th>
+                          <th>Service Type</th>
                           <th>Mechanic</th>
+                          <th>Comment</th>
                           </tr>
                           </thead>
                           <tbody>";
@@ -129,13 +129,13 @@ include('session_admin.php');
             echo "<tr><td>" .
               $row["date"] . "</td><td>" .
               $row["id_booking"] . "</td><td>" .
+              $row["make"] . "</td><td>" .
               $row["type"] . "</td><td>" .
               $row["engine_type"] . "</td><td>" .
-              $row["make"] . "</td><td>" .
-              $row["service_type"] . "</td><td>" .
               $row["license"] . "</td><td>" .
-              $row["status"] . "</td><td>" .
+              $row["service_type"] . "</td><td>" .
               $row["name"] . "</td><td>" .
+              $row["comment"] . "</td><td>" .
               "</td></tr>";
           }
           echo "</tbody>
@@ -145,28 +145,28 @@ include('session_admin.php');
         }
       }
 
-      if ($result = mysqli_query($conn, $sql)) {
-        if (mysqli_num_rows($result) > 0) {
-          echo " <div id='divisionInvoice' >
-            <div id='a112'>
-            <table id='table-invoice' class='table table-hover' style ='width: -webkit-fill-available;' >
-                              <thead>
-                              <tr>
-                              <th>Comment</th>
-                              </tr>
-                              </thead>
-                              <tbody>";
-          while ($row = $result->fetch_assoc()) {
-            echo "<tr><td>" .
-              $row["comment"] . "</td><td>" .
-              "</td></tr>";
-          }
-          echo "</tbody>
-                            </table></div></div>";
-        } else {
-          echo "0 Result";
-        }
-      }
+      // if ($result = mysqli_query($conn, $sql)) {
+      //   if (mysqli_num_rows($result) > 0) {
+      //     echo " <div id='divisionInvoice' >
+      //       <div id='a112'>
+      //       <table id='table-invoice' class='table table-hover' style ='width: -webkit-fill-available;' >
+      //                         <thead>
+      //                         <tr>
+      //                         <th>Comment</th>
+      //                         </tr>
+      //                         </thead>
+      //                         <tbody>";
+      //     while ($row = $result->fetch_assoc()) {
+      //       echo "<tr><td>" .
+      //         $row["comment"] . "</td><td>" .
+      //         "</td></tr>";
+      //     }
+      //     echo "</tbody>
+      //                       </table></div></div>";
+      //   } else {
+      //     echo "0 Result";
+      //   }
+      // }
     }
     ?>
 
