@@ -256,8 +256,8 @@ include('session_admin.php');
 
       //Sum prices and save into invoice
       $sql9 = "SELECT SUM(service_price)
-              FROM services
-              WHERE invoice_id_invoice =  $id_invoice;";
+               FROM services
+               WHERE invoice_id_invoice =  $id_invoice;";
 
       $sum_total1 = mysqli_query($conn, $sql9);
       $sum_total2 = mysqli_fetch_row($sum_total1); //array
@@ -267,10 +267,17 @@ include('session_admin.php');
       $todays_date = date("Y-m-d");
       $sql33 = "UPDATE invoice 
                 SET total_price= $sum_total3
-                SET date= $todays_date
                 WHERE id_invoice = $id_invoice;";
 
       $result = mysqli_query($conn, $sql33);
+
+
+      $todays_date = date("Y-m-d");
+      $sql333 = "UPDATE invoice 
+                SET date= $todays_date
+                WHERE id_invoice = $id_invoice;";
+
+      $result = mysqli_query($conn, $sql333);
 
 
       //Collumns Service and Price 

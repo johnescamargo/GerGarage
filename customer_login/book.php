@@ -176,37 +176,36 @@ include('session.php');
                           VALUES ('Major Repair', 160 ,$id_booking);";
 
                           $result5 = mysqli_query($conn, $sql5);
-                        }
-
+                        } else 
                         // Save Annual Service
                         if ($service_type === "Annual Service") {
                           //Update into Invoice Table
                           $sql34 = "UPDATE invoice 
                           SET total_price= 235
                           WHERE booking_id_booking = $id_booking;";
-                          $result2 = mysqli_query($conn, $sql34);
+                          $result22 = mysqli_query($conn, $sql34);
 
                           //save value to Services table
                           $sql5 = "INSERT INTO services (`service_name`, `service_price`, `invoice_id_invoice`)
                           VALUES ('Annual Service', 160 ,$id_booking);";
 
                           $result5 = mysqli_query($conn, $sql5);
-                        }
+                        } else
 
                         // Save Major Service
                         if ($service_type === "Major Service") {
                           //Update into Invoice Table
-                          $sql34 = "UPDATE invoice 
+                          $sql344 = "UPDATE invoice 
                           SET total_price= 235
                           WHERE booking_id_booking = $id_booking;";
-                          $result2 = mysqli_query($conn, $sql34);
+                          $result26 = mysqli_query($conn, $sql344);
 
                           //save value to Services table
                           $sql5 = "INSERT INTO services (`service_name`, `service_price`, `invoice_id_invoice`)
-                         VALUES ('Major Service', 150, $id_booking);";
+                          VALUES ('Major Service', 150, $id_booking);";
 
                           $result5 = mysqli_query($conn, $sql5);
-                        }
+                        } else
 
                         // Save Repair / Fault
                         if ($service_type === "Repair / Fault") {
@@ -222,9 +221,6 @@ include('session.php');
 
                           $result5 = mysqli_query($conn, $sql5);
                         }
-
-
-
 
 
                       } else {
