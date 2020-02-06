@@ -133,6 +133,46 @@ include('session.php');
     }
     ?>
 
+<div id="sign-up">
+    <?php
+    //Our select statement. This will retrieve the data that we want.
+    $email = $_SESSION["login_gergarage"];
+
+    $sql = "SELECT * FROM vehicle WHERE customer_email = '$email'
+            ORDER BY make;";
+
+
+    //  $sql = "SELECT * FROM booking where Customer_email = '$email' ORDER BY DATE;";
+
+    if ($result = mysqli_query($conn, $sql)) {
+      if (mysqli_num_rows($result) > 0) {
+        echo " <div id='sign-up3'> <table class='table table-hover'>
+        <thead>
+        <tr>
+        <th>Make</th>
+        <th>Type</th>
+        <th>Engine</th>
+        <th>License</th>
+        </tr>
+        </thead>
+        <tbody>";
+        while ($row = $result->fetch_assoc()) {
+          echo "<tr><td>" .
+            $row["make"] . "</td><td>" .
+            $row["type"] . "</td><td>" .
+            $row["engine_type"] . "</td><td>" .
+            $row["license"] . "</td><td>" .
+               "</td></tr>";
+        }
+        echo "</tbody>
+        </table></div>";
+      } else {
+        echo "0 Result";
+      }
+    }
+    ?>
+  </div>
+
 
 </body>
 
